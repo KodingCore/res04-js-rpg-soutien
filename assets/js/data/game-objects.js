@@ -1,6 +1,51 @@
 let objects = [
     {
         type : "tree",
+        posX : 4,
+        posY : 16
+    },
+    {
+        type : "tree",
+        posX : 12,
+        posY : 1
+    },
+    {
+        type : "tree",
+        posX : 21,
+        posY : 1
+    },
+    {
+        type : "tree",
+        posX : 4,
+        posY : 3
+    },
+    {
+        type : "tree",
+        posX : 25,
+        posY : 1
+    },
+    {
+        type : "tree",
+        posX : 26,
+        posY : 1
+    },
+    {
+        type : "tree",
+        posX : 25,
+        posY : 2
+    },
+    {
+        type : "tree",
+        posX : 26,
+        posY : 2
+    },
+    {
+        type : "tree",
+        posX : 8,
+        posY : 8
+    },
+    {
+        type : "tree",
         posX : 5,
         posY : 2
     },
@@ -53,6 +98,11 @@ let objects = [
         type: "chest",
         posX: 28,
         posY : 11
+    },
+    {
+        type: "chest",
+        posX: 6,
+        posY : 17
     }
 ];
 
