@@ -10,4 +10,22 @@ body {
   height:100vh;
   display: grid;
   grid-template-columns: repeat(30, 1fr);
+
+  #inventory{
+    background-color: rgba(163, 147, 3, 0.308);
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    
+     //backgroundImage = "url('assets/images/axe.svg')";
+    position: fixed;
+    width: 210px;
+    height: 70px;
+    bottom: 0;
+    left: calc(50% - 210px / 2);
+
+    div{
+      border: solid 2px rgba(112, 101, 1, 0.692);
+    }
+    
+  }
 }

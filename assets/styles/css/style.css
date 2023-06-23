@@ -142,6 +142,93 @@
   background-position: center;
 }
 
+.logs {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.logs.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/logs.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.logs.water {
+  background-color: #3b7693;
+  background-image: url("../../images/logs.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.logs.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/logs.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.logs.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/logs.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.axe {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.axe.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/axe.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.axe.water {
+  background-color: #3b7693;
+  background-image: url("../../images/axe.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.axe.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/axe.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.axe.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/axe.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hammer {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hammer.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/hammer.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hammer.water {
+  background-color: #3b7693;
+  background-image: url("../../images/hammer.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hammer.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/hammer.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hammer.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/hammer.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .character {
   background-repeat: no-repeat;
   background-position: center;
@@ -173,4 +260,17 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(30, 1fr);
+}
+body #inventory {
+  background-color: rgba(163, 147, 3, 0.308);
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  position: fixed;
+  width: 210px;
+  height: 70px;
+  bottom: 0;
+  left: calc(50% - 105px);
+}
+body #inventory div {
+  border: solid 2px rgba(112, 101, 1, 0.692);
 }/*# sourceMappingURL=style.css.map */

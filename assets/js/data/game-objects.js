@@ -33,6 +33,16 @@ let objects = [
         type: "stump",
         posX: 15,
         posY : 11
+    },
+    {
+        type: "axe",
+        posX: 18,
+        posY : 11
+    },
+    {
+        type: "hammer",
+        posX: 26,
+        posY : 5
     }
 ];
 

@@ -129,3 +129,102 @@
     background-position: center;
   }
 }
+
+.logs {
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &.grass {
+    background-color: #5da88a;
+    background-image: url("../../images/logs.svg"), url("../../images/grass.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.water {
+    background-color: #3b7693;
+    background-image: url("../../images/logs.svg"), url("../../images/water.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.dirt {
+    background-color: #9b6a49;
+    background-image: url("../../images/logs.svg"), url("../../images/dirt.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.sand {
+    background-color: #f9ee67;
+    background-image: url("../../images/logs.svg"), url("../../images/sand.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.axe {
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &.grass {
+    background-color: #5da88a;
+    background-image: url("../../images/axe.svg"), url("../../images/grass.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.water {
+    background-color: #3b7693;
+    background-image: url("../../images/axe.svg"), url("../../images/water.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.dirt {
+    background-color: #9b6a49;
+    background-image: url("../../images/axe.svg"), url("../../images/dirt.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.sand {
+    background-color: #f9ee67;
+    background-image: url("../../images/axe.svg"), url("../../images/sand.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.hammer {
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &.grass {
+    background-color: #5da88a;
+    background-image: url("../../images/hammer.svg"), url("../../images/grass.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.water {
+    background-color: #3b7693;
+    background-image: url("../../images/hammer.svg"), url("../../images/water.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.dirt {
+    background-color: #9b6a49;
+    background-image: url("../../images/hammer.svg"), url("../../images/dirt.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.sand {
+    background-color: #f9ee67;
+    background-image: url("../../images/hammer.svg"), url("../../images/sand.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

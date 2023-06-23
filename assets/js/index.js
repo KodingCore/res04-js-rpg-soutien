@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", function(){
     initMap(20, 30);
     let heros = new Character();
     heros.render();
+    heros.inventorySpawn();
 
     this.window.addEventListener("keydown", function(event){
         if(event.key === "z" || event.key ==="Z"){
