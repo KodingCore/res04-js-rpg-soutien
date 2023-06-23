@@ -18,6 +18,14 @@ window.addEventListener("DOMContentLoaded", function(){
             heros.moveRight();
         }else if(event.key === "g" || event.key ==="G"){
             heros.godMod = !heros.godMod;
+        }else if(event.key === "&" || event.key ==="1"){
+            heros.refreshSelection(0);
+        }else if(event.key === "é" || event.key ==="2"){
+            heros.refreshSelection(1);
+        }else if(event.key === '"' || event.key ==="3"){
+            heros.refreshSelection(2);
+        }else if(event.key === "'" || event.key ==="4"){
+            heros.refreshSelection(3);
         }
     });
 });

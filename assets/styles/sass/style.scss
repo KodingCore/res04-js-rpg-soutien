@@ -14,18 +14,19 @@ body {
   #inventory{
     background-color: rgba(163, 147, 3, 0.308);
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    
-     //backgroundImage = "url('assets/images/axe.svg')";
+    grid-template-columns: 25% 25% 25% 25%;
     position: fixed;
-    width: 210px;
+    width: 280px;
     height: 70px;
     bottom: 0;
-    left: calc(50% - 210px / 2);
+    left: calc(50% - 280px / 2);
 
     div{
       border: solid 2px rgba(112, 101, 1, 0.692);
     }
-    
+    div.selected{
+      border: solid 3px rgba(113, 231, 1, 0.904);
+    }
+
   }
 }

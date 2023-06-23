@@ -229,6 +229,64 @@
   background-position: center;
 }
 
+.chest {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.chest.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/chest.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.chest.water {
+  background-color: #3b7693;
+  background-image: url("../../images/chest.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.chest.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/chest.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.chest.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/chest.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.shovel {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.shovel.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/shovel.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.shovel.water {
+  background-color: #3b7693;
+  background-image: url("../../images/shovel.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.shovel.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/shovel.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.shovel.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/shovel.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .character {
   background-repeat: no-repeat;
   background-position: center;
@@ -264,13 +322,16 @@ body {
 body #inventory {
   background-color: rgba(163, 147, 3, 0.308);
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 25% 25% 25% 25%;
   position: fixed;
-  width: 210px;
+  width: 280px;
   height: 70px;
   bottom: 0;
-  left: calc(50% - 105px);
+  left: calc(50% - 140px);
 }
 body #inventory div {
   border: solid 2px rgba(112, 101, 1, 0.692);
+}
+body #inventory div.selected {
+  border: solid 3px rgba(113, 231, 1, 0.904);
 }/*# sourceMappingURL=style.css.map */
