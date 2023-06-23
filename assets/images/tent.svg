@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F4F1BA;}
+	.st1{fill:#F7F09C;}
+	.st2{fill:#8E8B6B;}
+</style>
+<polyline class="st0" points="11,406 169,95 342,95 342,410 "/>
+<polygon class="st1" points="169,95 11,410 180.1,413.9 341.1,98.4 "/>
+<polygon class="st0" points="342,263 420.6,418 503,418 342,105.4 "/>
+<polygon class="st2" points="416.6,410 346,410 346,279 "/>
+<path d="M512.1,410.8L350.4,92.6c-0.3-0.6-0.6-1-1-1.4v-0.3c-0.5-0.5-1-1-1.7-1.4h-0.4c-0.5-0.3-1-0.6-1.6-0.7h-0.6
+	c-0.7-0.2-1.4-0.3-2.2-0.3H169.4c-3.4,0-6.4,1.8-7.9,4.8l-162,318.2c-1.8,4.5,0.3,9.7,4.8,11.5c1,0.4,2,0.6,3.1,0.6h496.8
+	c4.9,0,8.9-3.9,8.9-8.8C513.1,413.4,512.8,412,512.1,410.8L512.1,410.8z M193.4,405.9l140.3-272.8v272.8H193.4z M351.4,294l55.4,112
+	h-55.4V294z M174.6,105.4h153.2L173.5,405.9H21.8L174.6,105.4z M426.2,405.9l-74.8-151.8l0-120.7l138.4,272.5L426.2,405.9z"/>
+</svg>

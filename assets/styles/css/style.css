@@ -1,0 +1,176 @@
+.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.water {
+  background-color: #3b7693;
+  background-image: url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tree {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.tree.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/tree.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.tree.water {
+  background-color: #3b7693;
+  background-image: url("../../images/tree.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.tree.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/tree.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.tree.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/tree.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stump {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.stump.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/stump.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.stump.water {
+  background-color: #3b7693;
+  background-image: url("../../images/stump.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.stump.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/stump.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.stump.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/stump.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.log {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.log.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/logs.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.log.water {
+  background-color: #3b7693;
+  background-image: url("../../images/logs.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.log.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/logs.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.log.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/logs.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.rock {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.rock.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/rocks.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.rock.water {
+  background-color: #3b7693;
+  background-image: url("../../images/rocks.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.rock.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/rocks.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.rock.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/rocks.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.character {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.character.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/character.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.character.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/character.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.character.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/character.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body {
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+}/*# sourceMappingURL=style.css.map */
