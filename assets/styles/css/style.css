@@ -403,6 +403,122 @@
   background-position: center;
 }
 
+.enemy {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.enemy.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/enemy.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.enemy.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/enemy.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.enemy.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/enemy.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.enemy.water {
+  background-color: #3b7693;
+  background-image: url("../../images/enemy.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.enemyLeft {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.enemyLeft.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/enemyLeft.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.enemyLeft.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/enemyLeft.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.enemyLeft.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/enemyLeft.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.enemyLeft.water {
+  background-color: #3b7693;
+  background-image: url("../../images/enemyLeft.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.enemyRight {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.enemyRight.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/enemyRight.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.enemyRight.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/enemyRight.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.enemyRight.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/enemyRight.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.enemyRight.water {
+  background-color: #3b7693;
+  background-image: url("../../images/enemyRight.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.enemyUp {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.enemyUp.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/enemyUp.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.enemyUp.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/enemyUp.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.enemyUp.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/enemyUp.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.enemyUp.water {
+  background-color: #3b7693;
+  background-image: url("../../images/enemyUp.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 body {
   font-size: 14px;
   padding: 0;

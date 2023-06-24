@@ -88,11 +88,16 @@ class Character {
     
     testIsWalkable(){
         let newCharacterBox = document.getElementsByClassName("col-" + this.#posX + " row-" + this.#posY)[0];
-        if(newCharacterBox.classList.contains("water") || newCharacterBox.classList.contains("stump") || newCharacterBox.classList.contains("tree") || newCharacterBox.classList.contains("rock")){
-            this.#walkable = false;
-        }else{
-            this.#walkable = true;
-        }
+        let listObjectsUnwalkable = ["water", "stump", "chest", "tree", "rock", "enemy"];
+        for(let object of listObjectsUnwalkable){
+            if(newCharacterBox.classList.contains(object)){
+                this.#walkable = false;
+                break;
+            }else{
+                this.#walkable = true;
+            }
+        };
+        
     }
 
     testOnTools(){
