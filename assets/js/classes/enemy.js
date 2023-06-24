@@ -32,9 +32,8 @@ class Enemy {
             this.testIsWalkable();
             if(!this.#walkable){
                 this.#posY++;
-            }else{
-                this.render("enemyUp");
             }
+            this.render("enemyUp");
         }
     }
 
@@ -44,9 +43,8 @@ class Enemy {
             this.testIsWalkable();
             if(!this.#walkable){
                 this.#posY--;
-            }else{
-                this.render("enemy");
             }
+            this.render("enemy");
         }
     }
 
@@ -56,9 +54,8 @@ class Enemy {
             this.testIsWalkable();
             if(!this.#walkable){
                 this.#posX++;
-            }else{
-                this.render("enemyLeft");
             }
+            this.render("enemyLeft");
         }
     }
 
@@ -68,9 +65,8 @@ class Enemy {
             this.testIsWalkable();
             if(!this.#walkable){
                 this.#posX--;
-            }else{
-                this.render("enemyRight");
             }
+            this.render("enemyRight");
         }
     }
     

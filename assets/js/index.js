@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
     let enemyTab = [enemy];
 
-    let intervalMoveEnemy = setInterval(updatePositionsEnemy, 750, enemyTab);
+    let intervalMoveEnemy = setInterval(updatePositionsEnemy, 250, enemyTab);
     
 });
 

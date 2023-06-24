@@ -44,9 +44,8 @@ class Character {
             this.testIsWalkable();
             if(!this.#walkable && !this.#godMod){
                 this.#posY++;
-            }else{
-                this.render("characterUp");
             }
+            this.render("characterUp");
         }
     }
 
@@ -56,9 +55,8 @@ class Character {
             this.testIsWalkable();
             if(!this.#walkable && !this.#godMod){
                 this.#posY--;
-            }else{
-                this.render("character");
             }
+            this.render("character");
         }
     }
 
@@ -68,9 +66,8 @@ class Character {
             this.testIsWalkable();
             if(!this.#walkable && !this.#godMod){
                 this.#posX++;
-            }else{
-                this.render("characterLeft");
             }
+            this.render("characterLeft");
         }
     }
 
@@ -80,9 +77,8 @@ class Character {
             this.testIsWalkable();
             if(!this.#walkable && !this.#godMod){
                 this.#posX--;
-            }else{
-                this.render("characterRight");
             }
+            this.render("characterRight");
         }
     }
     
