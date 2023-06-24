@@ -1,4 +1,5 @@
 import { map } from "../data/game-map.js";
+import { mapUp } from "../data/game-map.js";
 import { objects} from "../data/game-objects.js";
 import loadFloors from "./loadFloors.js";
 import loadObjects from "./loadObjects.js";
