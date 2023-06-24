@@ -88,7 +88,7 @@ class Character {
     
     testIsWalkable(){
         let newCharacterBox = document.getElementsByClassName("col-" + this.#posX + " row-" + this.#posY)[0];
-        let listObjectsUnwalkable = ["water", "stump", "chest", "tree", "rock", "enemy"];
+        let listObjectsUnwalkable = ["water", "stump", "chest", "tree", "rock", "enemy", "enemyUp", "enemyLeft", "enemyRight"];
         for(let object of listObjectsUnwalkable){
             if(newCharacterBox.classList.contains(object)){
                 this.#walkable = false;
@@ -101,6 +101,24 @@ class Character {
     }
 
     testOnTools(){
+        // let objects = [
+        //     {
+        //         tool: this.#axe,
+        //         name: "axe"
+        //     },
+        //     {
+        //         tool: this.#hammer,
+        //         name: "hammer"
+        //     },
+        //     {
+        //         tool: this.#shovel,
+        //         name: "shovel"
+        //     }
+        // ];
+
+        // for(let object of objects){
+            
+        // }
         if(!this.#axe){
             const axeNode = document.getElementsByClassName("axe")[0];
             if(axeNode.classList[0] === ("col-" + this.#posX) && axeNode.classList[1] === "row-" + this.#posY){

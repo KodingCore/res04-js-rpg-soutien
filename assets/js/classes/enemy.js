@@ -4,8 +4,8 @@ class Enemy {
     #walkable;
 
     constructor(posX, posY, walkable){
-        this.#posX = 23;
-        this.#posY = 10;
+        this.#posX = posX;
+        this.#posY = posY;
         this.#walkable = true;
     }
 
@@ -76,10 +76,14 @@ class Enemy {
     
     testIsWalkable(){
         let newEnemyBox = document.getElementsByClassName("col-" + this.#posX + " row-" + this.#posY)[0];
-        if(newEnemyBox.classList.contains("water") || newEnemyBox.classList.contains("stump") || newEnemyBox.classList.contains("tree") || newEnemyBox.classList.contains("rock")){
-            this.#walkable = false;
-        }else{
-            this.#walkable = true;
+        let listObjectsUnwalkable = ["water", "stump", "chest", "tree", "rock", "character",  "characterUp", "characterLeft", "characterRight"];
+        for(let object of listObjectsUnwalkable){
+            if(newEnemyBox.classList.contains(object)){
+                this.#walkable = false;
+                break;
+            }else{
+                this.#walkable = true;
+            }
         }
     }
 
