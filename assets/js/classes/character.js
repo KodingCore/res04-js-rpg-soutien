@@ -1,4 +1,3 @@
-
 class Character {
     #posX;
     #posY;
@@ -7,9 +6,8 @@ class Character {
     #axe;
     #hammer;
     #shovel;
-    #selection;
 
-    constructor(posX, posY, walkable, godMod, axe, hammer, shovel, selection){
+    constructor(posX, posY, walkable, godMod, axe, hammer, shovel){
         this.#posX = 19;
         this.#posY = 15;
         this.#walkable = true;
@@ -17,7 +15,6 @@ class Character {
         this.#axe = false;
         this.#hammer = false;
         this.#shovel = false;
-        this.#selection = "robot-hand";
     }
 
     get posX(){
@@ -48,11 +45,9 @@ class Character {
             if(!this.#walkable && !this.#godMod){
                 this.#posY++;
             }else{
-                this.render();
+                this.render("characterUp");
             }
-
         }
-        
     }
 
     moveDown(){
@@ -62,7 +57,7 @@ class Character {
             if(!this.#walkable && !this.#godMod){
                 this.#posY--;
             }else{
-                this.render();
+                this.render("character");
             }
         }
     }
@@ -74,7 +69,7 @@ class Character {
             if(!this.#walkable && !this.#godMod){
                 this.#posX++;
             }else{
-                this.render();
+                this.render("characterLeft");
             }
         }
     }
@@ -86,7 +81,7 @@ class Character {
             if(!this.#walkable && !this.#godMod){
                 this.#posX--;
             }else{
-                this.render();
+                this.render("characterRight");
             }
         }
     }
@@ -146,32 +141,12 @@ class Character {
 
     addTool(tool){
         const inventory = document.getElementById("inventory");
-        if(tool === "axe"){
-            if(!inventory.children[1].style.backgroundImage){
-                inventory.children[1].style.backgroundImage =  "url('assets/images/axe.svg')";
-            }else if(!inventory.children[2].style.backgroundImage){
-                inventory.children[2].style.backgroundImage =  "url('assets/images/axe.svg')";
-            }else{
-                inventory.children[3].style.backgroundImage =  "url('assets/images/axe.svg')";
-            }
-        }
-        if(tool === "hammer"){
-            if(!inventory.children[1].style.backgroundImage){
-                inventory.children[1].style.backgroundImage =  "url('assets/images/hammer.svg')";
-            }else if(!inventory.children[2].style.backgroundImage){
-                inventory.children[2].style.backgroundImage =  "url('assets/images/hammer.svg')";
-            }else{
-                inventory.children[3].style.backgroundImage =  "url('assets/images/hammer.svg')";
-            }
-        }
-        if(tool === "shovel"){
-            if(!inventory.children[1].style.backgroundImage){
-                inventory.children[1].style.backgroundImage =  "url('assets/images/shovel.svg')";
-            }else if(!inventory.children[2].style.backgroundImage){
-                inventory.children[2].style.backgroundImage =  "url('assets/images/shovel.svg')";
-            }else{
-                inventory.children[3].style.backgroundImage =  "url('assets/images/shovel.svg')";
-            }
+        if(!inventory.children[1].style.backgroundImage){
+            inventory.children[1].style.backgroundImage =  "url('assets/images/" + tool + ".svg')";
+        }else if(!inventory.children[2].style.backgroundImage){
+            inventory.children[2].style.backgroundImage =  "url('assets/images/" + tool + ".svg')";
+        }else{
+            inventory.children[3].style.backgroundImage =  "url('assets/images/" + tool + ".svg')";
         }
     }
 
@@ -203,19 +178,34 @@ class Character {
         }
     }
 
-    render(){
+    render(classChoice){
 
-        let lastCharacterBox = document.getElementsByClassName("character");
+        
         let newCharacterBox = document.getElementsByClassName("col-" + this.#posX + " row-" + this.#posY)[0];
 
+        let lastCharacterBox = document.getElementsByClassName("character");
         if(lastCharacterBox.length > 0){
             lastCharacterBox[0].classList.remove("character");
+        }else{
+            lastCharacterBox = document.getElementsByClassName("characterUp");
+            if(lastCharacterBox.length > 0){
+                lastCharacterBox[0].classList.remove("characterUp");
+            }else{
+                lastCharacterBox = document.getElementsByClassName("characterLeft");
+                if(lastCharacterBox.length > 0){
+                    lastCharacterBox[0].classList.remove("characterLeft");
+                }else{
+                    lastCharacterBox = document.getElementsByClassName("characterRight");
+                    if(lastCharacterBox.length > 0){
+                        lastCharacterBox[0].classList.remove("characterRight");
+                    }
+                }
+            }
         }
         
-        newCharacterBox.classList.add("character");
+        newCharacterBox.classList.add(classChoice);
 
         this.testOnTools();
-        
     }
 }
 

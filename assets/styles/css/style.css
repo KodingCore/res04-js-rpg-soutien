@@ -309,6 +309,99 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+.character.water {
+  background-color: #3b7693;
+  background-image: url("../../images/character.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.characterLeft {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.characterLeft.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/characterLeft.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.characterLeft.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/characterLeft.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.characterLeft.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/characterLeft.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.characterLeft.water {
+  background-color: #3b7693;
+  background-image: url("../../images/characterLeft.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.characterRight {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.characterRight.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/characterRight.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.characterRight.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/characterRight.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.characterRight.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/characterRight.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.characterRight.water {
+  background-color: #3b7693;
+  background-image: url("../../images/characterRight.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.characterUp {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.characterUp.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/characterUp.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.characterUp.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/characterUp.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.characterUp.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/characterUp.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.characterUp.water {
+  background-color: #3b7693;
+  background-image: url("../../images/characterUp.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 body {
   font-size: 14px;

@@ -23,5 +23,117 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  &.water {
+    background-color: #3b7693;
+    background-image: url("../../images/character.svg"), url("../../images/water.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+}
+
+.characterLeft {
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+  &.grass {
+    background-color: #5da88a;
+    background-image: url("../../images/characterLeft.svg"), url("../../images/grass.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.dirt {
+    background-color: #9b6a49;
+    background-image: url("../../images/characterLeft.svg"), url("../../images/dirt.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.sand {
+    background-color: #f9ee67;
+    background-image: url("../../images/characterLeft.svg"), url("../../images/sand.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.water {
+    background-color: #3b7693;
+    background-image: url("../../images/characterLeft.svg"), url("../../images/water.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+}
+
+.characterRight {
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+  &.grass {
+    background-color: #5da88a;
+    background-image: url("../../images/characterRight.svg"), url("../../images/grass.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.dirt {
+    background-color: #9b6a49;
+    background-image: url("../../images/characterRight.svg"), url("../../images/dirt.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.sand {
+    background-color: #f9ee67;
+    background-image: url("../../images/characterRight.svg"), url("../../images/sand.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.water {
+    background-color: #3b7693;
+    background-image: url("../../images/characterRight.svg"), url("../../images/water.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+}
+
+.characterUp {
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+  &.grass {
+    background-color: #5da88a;
+    background-image: url("../../images/characterUp.svg"), url("../../images/grass.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.dirt {
+    background-color: #9b6a49;
+    background-image: url("../../images/characterUp.svg"), url("../../images/dirt.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.sand {
+    background-color: #f9ee67;
+    background-image: url("../../images/characterUp.svg"), url("../../images/sand.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.water {
+    background-color: #3b7693;
+    background-image: url("../../images/characterUp.svg"), url("../../images/water.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   
 }
