@@ -104,6 +104,12 @@ let objects = [
         posX: 6,
         posY : 17
     }
+    ,
+    {
+        type: "sword",
+        posX: 17,
+        posY : 3
+    }
 ];
 
 export { objects };

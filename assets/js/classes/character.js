@@ -6,8 +6,9 @@ class Character {
     #axe;
     #hammer;
     #shovel;
+    #sword;
 
-    constructor(posX, posY, walkable, godMod, axe, hammer, shovel){
+    constructor(posX, posY, walkable, godMod, axe, hammer, shovel, sword){
         this.#posX = 19;
         this.#posY = 15;
         this.#walkable = true;
@@ -15,6 +16,7 @@ class Character {
         this.#axe = false;
         this.#hammer = false;
         this.#shovel = false;
+        this.#sword = false;
     }
 
     get posX(){
@@ -139,6 +141,14 @@ class Character {
                 this.addTool("shovel");
             }
         }
+        if(!this.#sword){
+            const swordNode = document.getElementsByClassName("sword")[0];
+            if(swordNode.classList[0] === ("col-" + this.#posX) && swordNode.classList[1] === "row-" + this.#posY){
+                swordNode.classList.remove("sword");
+                this.#sword = true;
+                this.addTool("sword");
+            }
+        }
     }
 
     inventorySpawn(){
@@ -147,7 +157,7 @@ class Character {
         bodyNode.appendChild(inventory);
         inventory.id = "inventory";
         
-        for(let i = 0; i < 4; i++){
+        for(let i = 0; i < 5; i++){
             const caseInventory = document.createElement("div");
             inventory.appendChild(caseInventory);
             caseInventory.id = "case-inventory" + i;
@@ -164,8 +174,10 @@ class Character {
             inventory.children[1].style.backgroundImage =  "url('assets/images/" + tool + ".svg')";
         }else if(!inventory.children[2].style.backgroundImage){
             inventory.children[2].style.backgroundImage =  "url('assets/images/" + tool + ".svg')";
-        }else{
+        }else if(!inventory.children[3].style.backgroundImage){
             inventory.children[3].style.backgroundImage =  "url('assets/images/" + tool + ".svg')";
+        }else{
+            inventory.children[4].style.backgroundImage =  "url('assets/images/" + tool + ".svg')";
         }
     }
 
@@ -174,26 +186,37 @@ class Character {
         const case2 = document.getElementById("case-inventory1");
         const case3 = document.getElementById("case-inventory2");
         const case4 = document.getElementById("case-inventory3");
+        const case5 = document.getElementById("case-inventory4");
         if(index === 0 && case1.style.backgroundImage){
             case2.classList.remove("selected");
             case3.classList.remove("selected");
             case4.classList.remove("selected");
+            case5.classList.remove("selected");
             case1.classList.add("selected");
         }else if(index === 1 && case2.style.backgroundImage){
             case1.classList.remove("selected");
             case3.classList.remove("selected");
             case4.classList.remove("selected");
+            case5.classList.remove("selected");
             case2.classList.add("selected");
         }else if(index === 2 && case3.style.backgroundImage){
             case1.classList.remove("selected");
             case2.classList.remove("selected");
             case4.classList.remove("selected");
+            case5.classList.remove("selected");
             case3.classList.add("selected");
         }else if(index === 3 && case4.style.backgroundImage){
             case1.classList.remove("selected");
             case2.classList.remove("selected");
             case3.classList.remove("selected");
+            case5.classList.remove("selected");
             case4.classList.add("selected");
+        }else if(index === 4 && case5.style.backgroundImage){
+            case1.classList.remove("selected");
+            case2.classList.remove("selected");
+            case3.classList.remove("selected");
+            case4.classList.remove("selected");
+            case5.classList.add("selected");
         }
     }
 

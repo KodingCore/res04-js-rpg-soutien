@@ -43,15 +43,12 @@ function keyEventsListeners(heros){
             heros.refreshSelection(2);
         }else if(event.key === "'" || event.key ==="4"){
             heros.refreshSelection(3);
+        }else if(event.key === "(" || event.key ==="5"){
+            heros.refreshSelection(4);
         }
     });
 }
-let countOne = 0;
-    let countTwo = 0;
-    let countThree = 0;
-    let countZero = 0;
     
-
 function updatePositionsEnemy(enemyTab){
 
     
@@ -72,20 +69,14 @@ function updatePositionsEnemy(enemyTab){
         }
 
         if(choiceDirection === 0){
-            countZero++;
             enemy.moveLeft();
         }else if(choiceDirection === 1){
-            countOne++;
             enemy.moveUp();
         }else if(choiceDirection === 2){
-            countTwo++;
             enemy.moveRight();
         }else if(choiceDirection === 3){
-            countThree++;
             enemy.moveDown();
         }
-        // console.clear();
-        // console.log("0 : " + countZero + " || 1 : " + countOne +  " || 2 : " + countTwo +  " || 3 : " + countThree);
     }
     
 }

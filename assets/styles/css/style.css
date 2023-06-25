@@ -287,6 +287,35 @@
   background-position: center;
 }
 
+.sword {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.sword.grass {
+  background-color: #5da88a;
+  background-image: url("../../images/sword.svg"), url("../../images/grass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.sword.water {
+  background-color: #3b7693;
+  background-image: url("../../images/sword.svg"), url("../../images/water.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.sword.dirt {
+  background-color: #9b6a49;
+  background-image: url("../../images/sword.svg"), url("../../images/dirt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.sword.sand {
+  background-color: #f9ee67;
+  background-image: url("../../images/sword.svg"), url("../../images/sand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .character {
   background-repeat: no-repeat;
   background-position: center;
@@ -531,12 +560,12 @@ body {
 body #inventory {
   background-color: rgba(163, 147, 3, 0.308);
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 20% 20% 20% 20% 20%;
   position: fixed;
-  width: 280px;
+  width: 350px;
   height: 70px;
   bottom: 0;
-  left: calc(50% - 140px);
+  left: calc(50% - 175px);
 }
 body #inventory div {
   border: solid 2px rgba(112, 101, 1, 0.692);
