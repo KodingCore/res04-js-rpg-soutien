@@ -1,12 +1,20 @@
 class Enemy {
+    #name;
     #posX;
     #posY;
+    #initPosX;
+    #initPosY;
     #walkable;
+    #zoning;
 
-    constructor(posX, posY, walkable){
+    constructor(name, posX, posY, zoning){
+        this.#name = name;
         this.#posX = posX;
         this.#posY = posY;
+        this.#initPosX = posX;
+        this.#initPosY = posY;
         this.#walkable = true;
+        this.#zoning = zoning;
     }
 
     get posX(){
@@ -17,6 +25,10 @@ class Enemy {
         return this.#posY;
     }
 
+    get name(){
+        return this.#name;
+    }
+
     set posX(posX){
         this.#posX = posX;
     }
@@ -25,48 +37,57 @@ class Enemy {
         this.#posY = posY;
     }
 
+    set name(name){
+        this.#name = name;
+    }
+
     moveUp(){
         
-        if(this.#posY > 0){
+        if(this.#posY > 0 && this.#posY > this.#initPosY - this.#zoning){
             this.#posY--;
             this.testIsWalkable();
             if(!this.#walkable){
                 this.#posY++;
+            }else{
+                this.render("enemyUp");
             }
-            this.render("enemyUp");
+            
         }
     }
 
     moveDown(){
-        if(this.#posY < 19){
+        if(this.#posY < 19 && this.#posY < this.#initPosY + this.#zoning){
             this.#posY++;
             this.testIsWalkable();
             if(!this.#walkable){
                 this.#posY--;
+            }else{
+                this.render("enemy");
             }
-            this.render("enemy");
         }
     }
 
     moveLeft(){
-        if(this.#posX > 0){
+        if(this.#posX > 0 && this.#posX > this.#initPosX - this.#zoning){
             this.#posX--;
             this.testIsWalkable();
             if(!this.#walkable){
                 this.#posX++;
+            }else{
+                this.render("enemyLeft");
             }
-            this.render("enemyLeft");
         }
     }
 
     moveRight(){
-        if(this.#posX < 29){
+        if(this.#posX < 29 && this.#posX < this.#initPosX + this.#zoning){
             this.#posX++;
             this.testIsWalkable();
             if(!this.#walkable){
                 this.#posX--;
+            }else{
+                this.render("enemyRight");
             }
-            this.render("enemyRight");
         }
     }
     
@@ -88,21 +109,29 @@ class Enemy {
         
         let newEnemyBox = document.getElementsByClassName("col-" + this.#posX + " row-" + this.#posY)[0];
 
-        let lastEnemyBox = document.getElementsByClassName("enemy");
-        if(lastEnemyBox.length > 0){
-            lastEnemyBox[0].classList.remove("enemy");
+        newEnemyBox.classList.add(this.#name);
+
+        let lastEnemyBox = document.querySelector('.' + this.#name + '.enemy');
+
+        if(lastEnemyBox){
+            lastEnemyBox.classList.remove("enemy");
+            lastEnemyBox.classList.remove(this.#name);
         }else{
-            lastEnemyBox = document.getElementsByClassName("enemyUp");
-            if(lastEnemyBox.length > 0){
-                lastEnemyBox[0].classList.remove("enemyUp");
+            lastEnemyBox = document.querySelector('.' + this.#name + '.enemyUp');
+            if(lastEnemyBox){
+                lastEnemyBox.classList.remove("enemyUp");
+                lastEnemyBox.classList.remove(this.#name);
+
             }else{
-                lastEnemyBox = document.getElementsByClassName("enemyLeft");
-                if(lastEnemyBox.length > 0){
-                    lastEnemyBox[0].classList.remove("enemyLeft");
+                lastEnemyBox = document.querySelector('.' + this.#name + '.enemyLeft');
+                if(lastEnemyBox){
+                    lastEnemyBox.classList.remove("enemyLeft");
+                    lastEnemyBox.classList.remove(this.#name);
                 }else{
-                    lastEnemyBox = document.getElementsByClassName("enemyRight");
-                    if(lastEnemyBox.length > 0){
-                        lastEnemyBox[0].classList.remove("enemyRight");
+                    lastEnemyBox = document.querySelector('.' + this.#name + '.enemyRight');
+                    if(lastEnemyBox){
+                        lastEnemyBox.classList.remove("enemyRight");
+                        lastEnemyBox.classList.remove(this.#name);
                     }
                 }
             }
@@ -111,6 +140,8 @@ class Enemy {
         newEnemyBox.classList.add(classChoice);
 
     }
+
+    
 }
 
 export { Enemy };

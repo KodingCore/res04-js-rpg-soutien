@@ -13,11 +13,14 @@ window.addEventListener("DOMContentLoaded", function(){
     keyEventsListeners(heros);
 
     //ENEMY
-    let enemy = new Enemy(23, 12);
+    let bob = new Enemy("bob", 23, 12);
+    let henry = new Enemy("henry", 15, 12);
 
-    enemy.render("enemy");
 
-    let enemyTab = [enemy];
+    bob.render("enemy");
+    henry.render("enemy");
+
+    let enemyTab = [bob, henry];
 
     let intervalMoveEnemy = setInterval(updatePositionsEnemy, 250, enemyTab);
     
@@ -53,6 +56,7 @@ function updatePositionsEnemy(enemyTab){
 
     
     for(let enemy of enemyTab){
+        
         let choiceDirection = Math.round(Math.random(0, 1) * 3);
 
         while(enemy.posX >= 28 && choiceDirection === 2){
