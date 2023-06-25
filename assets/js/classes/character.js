@@ -3,20 +3,31 @@ class Character {
     #posY;
     #walkable;
     #godMod;
-    #axe;
-    #hammer;
-    #shovel;
-    #sword;
+    #objects;
 
-    constructor(posX, posY, walkable, godMod, axe, hammer, shovel, sword){
+    constructor(posX, posY, walkable, godMod, objects){
         this.#posX = 19;
         this.#posY = 15;
         this.#walkable = true;
         this.#godMod = false;
-        this.#axe = false;
-        this.#hammer = false;
-        this.#shovel = false;
-        this.#sword = false;
+        this.#objects = [
+            {
+                tool: false,
+                name: "axe"
+            },
+            {
+                tool: false,
+                name: "hammer"
+            },
+            {
+                tool: false,
+                name: "shovel"
+            },
+            {
+                tool: false,
+                name: "sword"
+            }
+        ];
     }
 
     get posX(){
@@ -99,55 +110,22 @@ class Character {
     }
 
     testOnTools(){
-        // let objects = [
-        //     {
-        //         tool: this.#axe,
-        //         name: "axe"
-        //     },
-        //     {
-        //         tool: this.#hammer,
-        //         name: "hammer"
-        //     },
-        //     {
-        //         tool: this.#shovel,
-        //         name: "shovel"
-        //     }
-        // ];
-
-        // for(let object of objects){
-            
-        // }
-        if(!this.#axe){
-            const axeNode = document.getElementsByClassName("axe")[0];
-            if(axeNode.classList[0] === ("col-" + this.#posX) && axeNode.classList[1] === "row-" + this.#posY){
-                axeNode.classList.remove("axe");
-                this.#axe = true;
-                this.addTool("axe");
-            }
-        }
-        if(!this.#hammer){
-            const hammerNode = document.getElementsByClassName("hammer")[0];
-            if(hammerNode.classList[0] === ("col-" + this.#posX) && hammerNode.classList[1] === "row-" + this.#posY){
-                hammerNode.classList.remove("hammer");
-                this.#hammer = true;
-                this.addTool("hammer");
-            }
-        }
-        if(!this.#shovel){
-            const shovelNode = document.getElementsByClassName("shovel")[0];
-            if(shovelNode.classList[0] === ("col-" + this.#posX) && shovelNode.classList[1] === "row-" + this.#posY){
-                shovelNode.classList.remove("shovel");
-                this.#shovel = true;
-                this.addTool("shovel");
-            }
-        }
-        if(!this.#sword){
-            const swordNode = document.getElementsByClassName("sword")[0];
-            if(swordNode.classList[0] === ("col-" + this.#posX) && swordNode.classList[1] === "row-" + this.#posY){
-                swordNode.classList.remove("sword");
-                this.#sword = true;
-                this.addTool("sword");
-            }
+        for(let i = 0; i < this.#objects.length; i++){
+            if(!this.#objects[i].tool){
+                 let toolNode = document.getElementsByClassName(this.#objects[i].name)[0];
+                 if(toolNode.classList[0] === ("col-" + this.#posX) && toolNode.classList[1] === "row-" + this.#posY){
+                     toolNode.classList.remove(this.#objects[i].name);
+                     this.#objects[i].tool = true;
+                     this.addTool(this.#objects[i].name);
+                     let tempObjects = [];
+                     for(let j = 0; j < this.#objects.length; j++){
+                        if(this.#objects[j] != this.#objects[i]){
+                            tempObjects.push(this.#objects[j]);
+                        }
+                     }
+                     this.#objects = tempObjects;
+                 }
+             }
         }
     }
 
