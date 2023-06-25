@@ -135,11 +135,14 @@ class Character {
         bodyNode.appendChild(inventory);
         inventory.id = "inventory";
         
-        for(let i = 0; i < 5; i++){
+        for(let i = 0; i < 10; i++){
             const caseInventory = document.createElement("div");
             inventory.appendChild(caseInventory);
             caseInventory.id = "case-inventory" + i;
-            if(i === 0){
+            if(i < 5){
+                caseInventory.textContent = i + 1 + "";
+            }
+            if(i === 5){
                 caseInventory.style.backgroundImage = "url('assets/images/robot-hand.svg')";
                 caseInventory.classList.add("selected");
             }
@@ -148,23 +151,23 @@ class Character {
 
     addTool(tool){
         const inventory = document.getElementById("inventory");
-        if(!inventory.children[1].style.backgroundImage){
-            inventory.children[1].style.backgroundImage =  "url('assets/images/" + tool + ".svg')";
-        }else if(!inventory.children[2].style.backgroundImage){
-            inventory.children[2].style.backgroundImage =  "url('assets/images/" + tool + ".svg')";
-        }else if(!inventory.children[3].style.backgroundImage){
-            inventory.children[3].style.backgroundImage =  "url('assets/images/" + tool + ".svg')";
+        if(!inventory.children[6].style.backgroundImage){
+            inventory.children[6].style.backgroundImage =  "url('assets/images/" + tool + ".svg')";
+        }else if(!inventory.children[7].style.backgroundImage){
+            inventory.children[7].style.backgroundImage =  "url('assets/images/" + tool + ".svg')";
+        }else if(!inventory.children[8].style.backgroundImage){
+            inventory.children[8].style.backgroundImage =  "url('assets/images/" + tool + ".svg')";
         }else{
-            inventory.children[4].style.backgroundImage =  "url('assets/images/" + tool + ".svg')";
+            inventory.children[9].style.backgroundImage =  "url('assets/images/" + tool + ".svg')";
         }
     }
 
     refreshSelection(index){
-        const case1 = document.getElementById("case-inventory0");
-        const case2 = document.getElementById("case-inventory1");
-        const case3 = document.getElementById("case-inventory2");
-        const case4 = document.getElementById("case-inventory3");
-        const case5 = document.getElementById("case-inventory4");
+        const case1 = document.getElementById("case-inventory5");
+        const case2 = document.getElementById("case-inventory6");
+        const case3 = document.getElementById("case-inventory7");
+        const case4 = document.getElementById("case-inventory8");
+        const case5 = document.getElementById("case-inventory9");
         if(index === 0 && case1.style.backgroundImage){
             case2.classList.remove("selected");
             case3.classList.remove("selected");

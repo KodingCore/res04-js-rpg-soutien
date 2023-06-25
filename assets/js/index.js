@@ -13,14 +13,15 @@ window.addEventListener("DOMContentLoaded", function(){
     keyEventsListeners(heros);
 
     //ENEMY
-    let bob = new Enemy("bob", 23, 12);
-    let henry = new Enemy("henry", 15, 12);
-
+    let bob = new Enemy("bob", 23, 12, 1);
+    let henry = new Enemy("henry", 15, 12, 3);
+    let harry = new Enemy("harry", 5, 10, 3);
 
     bob.render("enemy");
     henry.render("enemy");
+    harry.render("enemy");
 
-    let enemyTab = [bob, henry];
+    let enemyTab = [bob, henry, harry];
 
     let intervalMoveEnemy = setInterval(updatePositionsEnemy, 250, enemyTab);
     
