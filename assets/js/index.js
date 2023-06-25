@@ -12,18 +12,18 @@ window.addEventListener("DOMContentLoaded", function(){
     heros.inventorySpawn();
     keyEventsListeners(heros);
 
-    //ENEMY
-    let bob = new Enemy("bob", 23, 12, 1);
-    let henry = new Enemy("henry", 15, 12, 3);
-    let harry = new Enemy("harry", 5, 10, 3);
+    //ENEMYS
+    let enemyTab = [
+        new Enemy("bob", 23, 12, 1), 
+        new Enemy("henry", 15, 12, 3), 
+        new Enemy("harry", 5, 10, 3)
+    ];
 
-    bob.render("enemy");
-    henry.render("enemy");
-    harry.render("enemy");
+    for(let enemy of enemyTab){
+        enemy.render("enemy");
+    }
 
-    let enemyTab = [bob, henry, harry];
-
-    let intervalMoveEnemy = setInterval(updatePositionsEnemy, 250, enemyTab);
+    setInterval(updatePositionsEnemy, 750, enemyTab);
     
 });
 

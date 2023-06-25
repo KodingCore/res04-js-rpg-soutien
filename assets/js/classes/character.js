@@ -140,7 +140,9 @@ class Character {
             inventory.appendChild(caseInventory);
             caseInventory.id = "case-inventory" + i;
             if(i < 5){
-                caseInventory.textContent = i + 1 + "";
+                const textNodeInventory = document.createElement("p");
+                caseInventory.appendChild(textNodeInventory);
+                textNodeInventory.textContent = i + 1 + "";
             }
             if(i === 5){
                 caseInventory.style.backgroundImage = "url('assets/images/robot-hand.svg')";

@@ -5,6 +5,7 @@ class Enemy {
     #initPosX;
     #initPosY;
     #walkable;
+    #lastDirection;
     #zoning;
 
     constructor(name, posX, posY, zoning){
@@ -48,10 +49,13 @@ class Enemy {
             this.testIsWalkable();
             if(!this.#walkable){
                 this.#posY++;
+                this.redirection();
             }else{
                 this.render("enemyUp");
+                this.#lastDirection = "Up";
             }
-            
+        }else{
+            this.redirection();
         }
     }
 
@@ -61,9 +65,13 @@ class Enemy {
             this.testIsWalkable();
             if(!this.#walkable){
                 this.#posY--;
+                this.redirection();
             }else{
                 this.render("enemy");
+                this.#lastDirection = "Down";
             }
+        }else{
+            this.redirection();
         }
     }
 
@@ -73,9 +81,13 @@ class Enemy {
             this.testIsWalkable();
             if(!this.#walkable){
                 this.#posX++;
+                this.redirection();
             }else{
                 this.render("enemyLeft");
+                this.#lastDirection = "Left";
             }
+        }else{
+            this.redirection();
         }
     }
 
@@ -85,15 +97,31 @@ class Enemy {
             this.testIsWalkable();
             if(!this.#walkable){
                 this.#posX--;
+                this.redirection();
             }else{
                 this.render("enemyRight");
+                this.#lastDirection = "Right";
             }
+        }else{
+            this.redirection();
+        }
+    }
+
+    redirection(){
+        if(this.#lastDirection === "Left"){
+            this.moveRight();
+        }else if(this.#lastDirection === "Right"){
+            this.moveLeft();
+        }else if(this.#lastDirection === "Up"){
+            this.moveDown();
+        }else if(this.#lastDirection === "Down"){
+            this.moveUp();
         }
     }
     
     testIsWalkable(){
         let newEnemyBox = document.getElementsByClassName("col-" + this.#posX + " row-" + this.#posY)[0];
-        let listObjectsUnwalkable = ["water", "stump", "chest", "tree", "rock", "character",  "characterUp", "characterLeft", "characterRight"];
+        let listObjectsUnwalkable = ["water", "stump", "chest", "tree", "rock", "character",  "characterUp", "characterLeft", "characterRight", "hammer", "sword", "shovel", "axe"];
         for(let object of listObjectsUnwalkable){
             if(newEnemyBox.classList.contains(object)){
                 this.#walkable = false;
@@ -106,7 +134,6 @@ class Enemy {
 
     render(classChoice){
 
-        
         let newEnemyBox = document.getElementsByClassName("col-" + this.#posX + " row-" + this.#posY)[0];
 
         newEnemyBox.classList.add(this.#name);
@@ -136,12 +163,8 @@ class Enemy {
                 }
             }
         }
-        
         newEnemyBox.classList.add(classChoice);
-
     }
-
-    
 }
 
 export { Enemy };

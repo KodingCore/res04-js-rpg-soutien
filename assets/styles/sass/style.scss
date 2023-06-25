@@ -15,11 +15,11 @@ body {
   #inventory{
     background-color: rgba(163, 147, 3, 0.308);
     display: grid;
-    grid-template-rows: 3vw 5vw;
+    grid-template-rows: 2vw 5vw;
     grid-template-columns: 20% 20% 20% 20% 20%;
     position: fixed;
     width: 25vw;
-    height: 8vw;
+    height: 7vw;
     bottom: 10px;
     left: calc(50% - 25vw / 2);
 
@@ -29,7 +29,14 @@ body {
     div:nth-child(4),
     div:nth-child(5){
       background-color:rgba(42, 85, 2, 0.534);
-      text-align: center;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    p{
+      margin: 0;
+      font-size: 1.5vw;
       font-weight: bold;
       color: white;
     }
