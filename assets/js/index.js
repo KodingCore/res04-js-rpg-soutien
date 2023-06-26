@@ -32,6 +32,9 @@ function keyEventsListeners(heros){
     window.addEventListener("keydown", function(event){
         if(event.key === "z" || event.key ==="Z" || event.key ==="ArrowUp"){
             heros.moveUp();
+            // if(heros.newMap.changing === true){
+
+            // }
         }else if(event.key === "q" || event.key ==="Q" || event.key ==="ArrowLeft"){
             heros.moveLeft();
         }else if(event.key === "s" || event.key ==="S" || event.key ==="ArrowDown"){

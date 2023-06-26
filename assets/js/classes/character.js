@@ -4,6 +4,7 @@ class Character {
     #walkable;
     #godMod;
     #objects;
+    #newMap;
 
     constructor(posX, posY, walkable, godMod, objects){
         this.#posX = 19;
@@ -28,6 +29,10 @@ class Character {
                 name: "sword"
             }
         ];
+        this.#newMap = {
+            changing: false,
+            activeMap: "map"
+        };
     }
 
     get posX(){
@@ -36,6 +41,10 @@ class Character {
 
     get posY(){
         return this.#posY;
+    }
+
+    get newMap(){
+        return this.#newMap;
     }
 
     set posX(posX){
@@ -50,6 +59,10 @@ class Character {
         this.#godMod = godMod;
     }
 
+    set newMap(newMap){
+        this.#newMap = newMap;
+    }
+
     moveUp(){
         
         if(this.#posY > 0){
@@ -59,8 +72,9 @@ class Character {
                 this.#posY++;
             }
             this.render("characterUp");
-        }else{
-            
+        }else if(this.#posY === 0){
+            this.#newMap.changing = true;
+            this.#newMap.activeMap = "mapUp";
         }
     }
 
