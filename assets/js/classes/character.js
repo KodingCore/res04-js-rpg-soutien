@@ -75,6 +75,7 @@ class Character {
         }else if(this.#posY === 0){
             this.#newMap.changing = true;
             this.#newMap.activeMap = "mapUp";
+            this.render("characterUp");
         }
     }
 

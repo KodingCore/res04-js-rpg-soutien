@@ -32,9 +32,11 @@ function keyEventsListeners(heros){
     window.addEventListener("keydown", function(event){
         if(event.key === "z" || event.key ==="Z" || event.key ==="ArrowUp"){
             heros.moveUp();
-            // if(heros.newMap.changing === true){
-
-            // }
+            if(heros.newMap.changing === true){
+                heros.posY = 18;
+                console.log(heros.newMap.changing);
+                heros.newMap.changing = false;
+            }
         }else if(event.key === "q" || event.key ==="Q" || event.key ==="ArrowLeft"){
             heros.moveLeft();
         }else if(event.key === "s" || event.key ==="S" || event.key ==="ArrowDown"){
