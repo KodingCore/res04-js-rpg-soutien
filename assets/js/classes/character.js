@@ -59,6 +59,8 @@ class Character {
                 this.#posY++;
             }
             this.render("characterUp");
+        }else{
+            
         }
     }
 
@@ -97,7 +99,8 @@ class Character {
     
     testIsWalkable(){
         let newCharacterBox = document.getElementsByClassName("col-" + this.#posX + " row-" + this.#posY)[0];
-        let listObjectsUnwalkable = ["water", "stump", "chest", "tree", "rock", "enemy", "enemyUp", "enemyLeft", "enemyRight"];
+        let listObjectsUnwalkable = ["water", "stump", "chest", 
+        "tree", "rock", "enemy", "enemyUp", "enemyLeft", "enemyRight"];
         for(let object of listObjectsUnwalkable){
             if(newCharacterBox.classList.contains(object)){
                 this.#walkable = false;

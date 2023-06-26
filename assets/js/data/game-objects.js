@@ -56,13 +56,38 @@ let objects = [
     },
     {
         type : "tree",
-        posX : 15,
-        posY : 10
+        posX : 22,
+        posY : 9
     },
     {
         type : "tree",
         posX : 16,
-        posY : 10
+        posY : 8
+    },
+    {
+        type : "tree",
+        posX : 26,
+        posY : 15
+    },
+    {
+        type : "tree",
+        posX : 28,
+        posY : 15
+    },
+    {
+        type : "tree",
+        posX : 27,
+        posY : 17
+    },
+    {
+        type : "tree",
+        posX : 26,
+        posY : 19
+    },
+    {
+        type : "tree",
+        posX : 22,
+        posY : 18
     },
     {
         type : "rock",

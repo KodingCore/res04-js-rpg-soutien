@@ -16,7 +16,8 @@ window.addEventListener("DOMContentLoaded", function(){
     let enemyTab = [
         new Enemy("bob", 23, 12, 1), 
         new Enemy("henry", 15, 12, 3), 
-        new Enemy("harry", 5, 10, 3)
+        new Enemy("harry", 5, 10, 2),
+        new Enemy("Cops", 13, 4, 2)
     ];
 
     for(let enemy of enemyTab){
